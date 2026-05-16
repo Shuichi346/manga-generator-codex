@@ -37,9 +37,16 @@ When the user provides character or object images, treat them as visual referenc
 3. Choose a page template from `assets/Manga_Panel_Layout_Template/template_manifest.json`. If the manifest is missing, inspect the PNGs in `assets/Manga_Panel_Layout_Template/`.
 4. Write a page plan before generating images. For every page, include the selected template filename, page purpose, continuity notes, and exact panel briefs.
 5. Load any local template or reference images that should influence generation before calling imagegen. Label each loaded image by role before generation.
-6. Use `$imagegen` to generate one completed full-color manga page per planned page. Keep prompts page-specific and include all panels for that page in one prompt.
-7. Save final project-bound images under `output/manga-pages/` with stable filenames such as `page-001.png`.
-8. Report saved paths, selected templates, expansion mode, and page count.
+6. Use `$imagegen` to generate one completed full-color manga page per planned page in story order: Page 1 first, then Page 2, and so on. Keep prompts page-specific and include all panels for that page in one prompt.
+7. Save final project-bound images under `output/manga-pages/` with stable sequence filenames such as `page-001.png`, `page-002.png`, and `page-003.png`, matching the story order exactly.
+8. Report saved paths, selected templates, expansion mode, and page count in ascending page order.
+
+## Story Order Requirements
+
+- Treat the beat sheet as the source of truth for story progression.
+- Do not reorder planned pages after image generation based on completion time, visual quality, template choice, or file system ordering.
+- When multiple images are generated, present and arrange the completed pages in numeric page order from the story plan.
+- If a page must be regenerated, keep its original page number and filename so later pages do not shift.
 
 ## Required Page Plan Format
 

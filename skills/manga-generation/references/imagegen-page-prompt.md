@@ -6,6 +6,7 @@ Use this scaffold with `$imagegen` for each page. Replace bracketed text before 
 Use case: illustration-story
 Asset type: completed full-color manga page
 Primary request: Draw Page [N] as one complete colorful manga page, not separate panels and not a pasted collage.
+Page sequence: This is Page [N] of [TOTAL], generated and saved in story order. Preserve continuity from previous pages and do not depict later story beats early.
 Input images: [Image 1: selected panel layout template; Image 2: character reference; Image 3: style/reference image; Image 4: scene/object reference]
 Reference handling: Use the layout image as a panel geometry guide. Redraw character and object references into the manga artwork with consistent identity; do not paste or crop reference images into panels.
 Panel layout: Follow the selected template's panel borders and numeric panel order. Preserve the same number of panels and clear gutters. Do not add extra panels.
