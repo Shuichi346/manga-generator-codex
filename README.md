@@ -27,6 +27,20 @@ The skill bundles reusable manga page templates under `skills/manga-generation/a
 
 <img src="skills/manga-generation/assets/Manga_Panel_Layout_Template/generated-layout-5-panel-balanced.png" alt="Five-panel manga page template" width="480">
 
+## Example Results
+
+The `demo_image/` directory shows a sample prompt image and generated outputs so users can understand the expected workflow and visual result quality.
+
+Prompt image:
+
+<img src="demo_image/prompt-image.jpg" alt="Example manga generation prompt image" width="480">
+
+Generated outputs:
+
+<img src="demo_image/generated-image1.jpeg" alt="Generated manga example 1" width="240">
+<img src="demo_image/generated-image2.jpeg" alt="Generated manga example 2" width="240">
+<img src="demo_image/generated-image3.jpeg" alt="Generated manga example 3" width="240">
+
 ## Requirements
 
 - Codex with skill support.
@@ -94,6 +108,11 @@ Keep the skill self-contained under `skills/manga-generation/` so users can inst
 
 ```text
 .
+├── demo_image/
+│   ├── prompt-image.jpg
+│   ├── generated-image1.jpeg
+│   ├── generated-image2.jpeg
+│   └── generated-image3.jpeg
 ├── skills/
 │   └── manga-generation/
 │       ├── SKILL.md
