@@ -36,6 +36,13 @@ No API keys, credentials, or environment variables are defined by this repositor
 
 ## Installation
 
+```text
+@plugin-creator  Please install the `manga-generator-codex/plugins/manga-production` plugin.
+If there is no location to install the local Codex plugin, create one.
+```
+
+OR
+
 Use the plugin root directory when adding this plugin to Codex:
 
 ```text
@@ -106,12 +113,6 @@ Keep the plugin self-contained under `plugins/manga-production/` so it remains p
 ├── NOTES.md
 └── README.md
 ```
-
-## Publishing Checklist
-
-- Replace `maintainers@example.com` in `plugins/manga-production/.codex-plugin/plugin.json` with the final maintainer contact address.
-- Keep `.codex-plugin/plugin.json`, `skills/`, `assets/`, and `scripts/` inside `plugins/manga-production/`.
-- Keep `plugin.json` repository, homepage, website, privacy, and terms URLs aligned with `https://github.com/Shuichi346/manga-generator-codex`.
 
 ## Privacy
 

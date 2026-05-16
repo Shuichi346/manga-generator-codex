@@ -36,6 +36,13 @@ Manga Production は、ストーリー草稿・キャラクター資料・スタ
 
 ## インストール
 
+```text
+@plugin-creator  Please install the `manga-generator-codex/plugins/manga-production` plugin.
+If there is no location to install the local Codex plugin, create one.
+```
+
+もしくは、
+
 このプラグインを Codex に追加する際は、プラグインのルートディレクトリを使用してください：
 
 ```text
@@ -106,12 +113,6 @@ GitHub から公開できる状態を維持するため、プラグインは `pl
 ├── NOTES.md
 └── README.md
 ```
-
-## 公開チェックリスト
-
-- `plugins/manga-production/.codex-plugin/plugin.json` 内の `maintainers@example.com` を最終的なメンテナーの連絡先アドレスに置き換えてください。
-- `.codex-plugin/plugin.json`・`skills/`・`assets/`・`scripts/` を `plugins/manga-production/` 内に保持してください。
-- `plugin.json` のリポジトリ・ホームページ・ウェブサイト・プライバシー・利用規約の URL を `https://github.com/Shuichi346/manga-generator-codex` に合わせてください。
 
 ## プライバシー
 
