@@ -23,9 +23,9 @@ Manga Generation は、ストーリー草稿・キャラクター資料・スタ
 
 ## テンプレートプレビュー
 
-このスキルには、再利用可能なマンガページテンプレートが `assets/Manga_Panel_Layout_Template/` に同梱されています。
+このスキルには、再利用可能なマンガページテンプレートが `skills/manga-generation/assets/Manga_Panel_Layout_Template/` に同梱されています。
 
-<img src="assets/Manga_Panel_Layout_Template/generated-layout-5-panel-balanced.png" alt="5コママンガページテンプレート" width="480">
+<img src="skills/manga-generation/assets/Manga_Panel_Layout_Template/generated-layout-5-panel-balanced.png" alt="5コママンガページテンプレート" width="480">
 
 ## 要件
 
@@ -37,16 +37,16 @@ Manga Generation は、ストーリー草稿・キャラクター資料・スタ
 
 ## インストール
 
-このリポジトリを `manga-generation` というスキルフォルダ名で Codex の skills ディレクトリに clone またはコピーしてください：
+このリポジトリを clone し、同梱されているスキルフォルダを Codex の skills ディレクトリに配置してください：
 
 ```text
-~/.codex/skills/manga-generation
+skills/manga-generation/ -> ~/.codex/skills/manga-generation/
 ```
 
 必須のスキルエントリポイント：
 
 ```text
-SKILL.md
+skills/manga-generation/SKILL.md
 ```
 
 ## 使い方
@@ -68,7 +68,7 @@ Use $manga-generation in Slight Expansion mode for this story draft.
 - 展開モード：`Original`
 - 最大ページ数／画像数：`5`
 - テンプレートフォルダ：スキルディレクトリからの相対パス `assets/Manga_Panel_Layout_Template/`
-- 出力フォルダ：リポジトリルートからの相対パス `output/manga-pages/`
+- 出力フォルダ：アクティブなワークスペースまたはリポジトリルートからの相対パス `output/manga-pages/`
 
 スキルは生成前に各ページを企画します。各 `$imagegen` リクエストは、すべてのコマ・枠線・フキダシ・セリフ・効果音・ページ構成を含む完全なカラーマンガページを1枚生成する必要があります。
 
@@ -79,26 +79,28 @@ Use $manga-generation in Slight Expansion mode for this story draft.
 以下のコマンドで、決定論的なブランク原稿ベース・生成済みパネルテンプレート・`template_manifest.json` を再生成できます：
 
 ```bash
-python3 scripts/generate_manga_templates.py
+python3 skills/manga-generation/scripts/generate_manga_templates.py
 ```
 
 スクリプトの出力先：
 
 ```text
-assets/Manga_Panel_Layout_Template/
+skills/manga-generation/assets/Manga_Panel_Layout_Template/
 ```
 
-GitHub から公開できる状態を維持するため、スキルはリポジトリルートで自己完結するようにしてください。
+GitHub から公開できる状態を維持するため、スキルは `skills/manga-generation/` の下で自己完結するようにしてください。
 
 ## プロジェクト構成
 
 ```text
 .
-├── SKILL.md
-├── agents/openai.yaml
-├── assets/Manga_Panel_Layout_Template/
-├── references/
-├── scripts/generate_manga_templates.py
+├── skills/
+│   └── manga-generation/
+│       ├── SKILL.md
+│       ├── agents/openai.yaml
+│       ├── assets/Manga_Panel_Layout_Template/
+│       ├── references/
+│       └── scripts/generate_manga_templates.py
 ├── AGENTS.md
 ├── LICENSE
 └── README.md

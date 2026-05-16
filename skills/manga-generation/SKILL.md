@@ -18,7 +18,7 @@ Use these defaults unless the user specifies otherwise:
 - Expansion mode: `Original`
 - Maximum pages/images: `5`
 - Template folder: `assets/Manga_Panel_Layout_Template/` relative to this skill directory
-- Output folder for final pages: `output/manga-pages/` relative to the repository root
+- Output folder for final pages: `output/manga-pages/` relative to the active workspace or repository root
 
 Treat attached or referenced images explicitly by role: `character reference`, `style reference`, `scene/object reference`, or `panel layout template`.
 

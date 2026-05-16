@@ -23,9 +23,9 @@ Manga Generation is a Codex skill for planning and generating colorful manga pag
 
 ## Template Preview
 
-The skill bundles reusable manga page templates under `assets/Manga_Panel_Layout_Template/`.
+The skill bundles reusable manga page templates under `skills/manga-generation/assets/Manga_Panel_Layout_Template/`.
 
-<img src="assets/Manga_Panel_Layout_Template/generated-layout-5-panel-balanced.png" alt="Five-panel manga page template" width="480">
+<img src="skills/manga-generation/assets/Manga_Panel_Layout_Template/generated-layout-5-panel-balanced.png" alt="Five-panel manga page template" width="480">
 
 ## Requirements
 
@@ -37,16 +37,16 @@ No API keys, credentials, or environment variables are defined by this repositor
 
 ## Installation
 
-Clone or copy this repository as a skill folder named `manga-generation` under your Codex skills directory:
+Clone this repository, then drop the included skill folder into your Codex skills directory:
 
 ```text
-~/.codex/skills/manga-generation
+skills/manga-generation/ -> ~/.codex/skills/manga-generation/
 ```
 
 The required skill entry point is:
 
 ```text
-SKILL.md
+skills/manga-generation/SKILL.md
 ```
 
 ## Usage
@@ -68,7 +68,7 @@ By default, the skill uses:
 - Expansion mode: `Original`
 - Maximum pages/images: `5`
 - Template folder: `assets/Manga_Panel_Layout_Template/` relative to the skill directory
-- Output folder: `output/manga-pages/` relative to the repository root
+- Output folder: `output/manga-pages/` relative to the active workspace or repository root
 
 The skill plans each page before generation. Each `$imagegen` request should generate one complete colorful manga page containing all panels, borders, speech balloons, dialogue, sound effects, and page composition.
 
@@ -79,26 +79,28 @@ Template PNGs are only references for page geometry. Final pages should be drawn
 Regenerate deterministic blank manuscript bases, generated panel templates, and `template_manifest.json` with:
 
 ```bash
-python3 scripts/generate_manga_templates.py
+python3 skills/manga-generation/scripts/generate_manga_templates.py
 ```
 
 The script writes to:
 
 ```text
-assets/Manga_Panel_Layout_Template/
+skills/manga-generation/assets/Manga_Panel_Layout_Template/
 ```
 
-Keep the skill self-contained at the repository root so it remains publishable from GitHub.
+Keep the skill self-contained under `skills/manga-generation/` so users can install it by copying that folder.
 
 ## Project Structure
 
 ```text
 .
-├── SKILL.md
-├── agents/openai.yaml
-├── assets/Manga_Panel_Layout_Template/
-├── references/
-├── scripts/generate_manga_templates.py
+├── skills/
+│   └── manga-generation/
+│       ├── SKILL.md
+│       ├── agents/openai.yaml
+│       ├── assets/Manga_Panel_Layout_Template/
+│       ├── references/
+│       └── scripts/generate_manga_templates.py
 ├── AGENTS.md
 ├── LICENSE
 └── README.md
