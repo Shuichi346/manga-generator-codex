@@ -9,7 +9,7 @@
 
 # Manga Production Plugin for Codex
 
-Manga Production is a Codex plugin for planning and generating manga pages from story drafts, character references, and style notes. It provides a `manga-generation` skill that expands a draft into page beats, selects bundled manga page templates, writes panel-by-panel briefs, and uses `$imagegen` to generate each completed manga page as one full page instead of separate panel images.
+Manga Production is a Codex plugin for planning and generating colorful manga pages from story drafts, character references, and style notes. It provides a `manga-generation` skill that expands a draft into page beats, selects bundled manga page templates, writes panel-by-panel briefs, and uses `$imagegen` to render each completed manga page as one full page instead of separate panel images or code-composited layouts.
 
 ## Features
 
@@ -17,7 +17,8 @@ Manga Production is a Codex plugin for planning and generating manga pages from 
 - Supports three expansion modes: `Original`, `Slight Expansion`, and `Expansion`.
 - Selects from bundled blank manuscript bases and numbered manga panel layouts.
 - Produces page plans with template choice, page purpose, continuity notes, drawing briefs, dialogue, sound effects, and balloon placement.
-- Guides `$imagegen` to create complete black-and-white manga pages with preserved panel borders and gutters.
+- Guides `$imagegen` to create complete full-color manga pages with preserved panel borders and gutters.
+- Uses templates and user-provided images as role-labeled references for image generation, not as pasted or Python-composited assets.
 - Keeps generated manga pages under `output/manga-pages/`, which is ignored by Git.
 
 ## Template Preview
@@ -60,7 +61,7 @@ plugins/manga-production/.codex-plugin/plugin.json
 Invoke the skill from Codex with a story draft and any relevant reference images:
 
 ```text
-Use $manga-generation to make a 5-page manga from my draft and references.
+Use $manga-generation to make a 5-page colorful manga from my draft and references.
 ```
 
 You can also specify an expansion mode:
@@ -76,7 +77,9 @@ By default, the skill uses:
 - Template folder: `assets/Manga_Panel_Layout_Template/` relative to the skill directory
 - Output folder: `output/manga-pages/` relative to the repository root
 
-The skill plans each page before generation. Each `$imagegen` request should generate one complete manga page containing all panels, borders, speech balloons, dialogue, sound effects, and page composition.
+The skill plans each page before generation. Each `$imagegen` request should generate one complete colorful manga page containing all panels, borders, speech balloons, dialogue, sound effects, and page composition.
+
+Template PNGs are only references for page geometry. Final pages should be drawn by imagegen from the template, story plan, and user reference images rather than assembled with Python or pasted source images.
 
 ## Development
 

@@ -10,6 +10,7 @@ Page 1
 Template: generated-layout-5-panel-balanced.png
 Page purpose: Establish the protagonist, setting, and first problem.
 Continuity: Protagonist wears the same school jacket from the reference image; rainy evening street; anxious mood.
+Color continuity: Navy school jacket, warm convenience-store light, cool blue rain, red torn-poster symbol.
 
 Panel 1:
 Draw: Wide establishing shot of the rainy shopping street, protagonist small in frame under a convenience store awning.
