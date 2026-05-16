@@ -5,10 +5,10 @@
   "author": {
     "name": "Manga Production Plugin Maintainers",
     "email": "maintainers@example.com",
-    "url": "https://github.com/OWNER/REPOSITORY"
+    "url": "https://github.com/Shuichi346/manga-generator-codex"
   },
-  "homepage": "https://github.com/OWNER/REPOSITORY#readme",
-  "repository": "https://github.com/OWNER/REPOSITORY",
+  "homepage": "https://github.com/Shuichi346/manga-generator-codex#readme",
+  "repository": "https://github.com/Shuichi346/manga-generator-codex",
   "license": "MIT",
   "keywords": [
     "manga",
@@ -28,9 +28,9 @@
       "Interactive",
       "Write"
     ],
-    "websiteURL": "https://github.com/OWNER/REPOSITORY#readme",
-    "privacyPolicyURL": "https://github.com/OWNER/REPOSITORY#privacy",
-    "termsOfServiceURL": "https://github.com/OWNER/REPOSITORY#terms-of-use",
+    "websiteURL": "https://github.com/Shuichi346/manga-generator-codex#readme",
+    "privacyPolicyURL": "https://github.com/Shuichi346/manga-generator-codex#privacy",
+    "termsOfServiceURL": "https://github.com/Shuichi346/manga-generator-codex#terms-of-use",
     "defaultPrompt": [
       "Use $manga-generation to make a 5-page manga from my draft and references.",
       "Use $manga-generation in Slight Expansion mode for this story draft.",
