@@ -2,11 +2,11 @@
 
 Project instructions for coding agents working in this repository.
 
-## Plugin Structure
+## Skill Structure
 
-- Keep the published plugin rooted at `plugins/manga-production/`.
-- Keep `.codex-plugin/plugin.json`, `skills/`, `assets/`, and `scripts/` inside `plugins/manga-production/` so the plugin remains self-contained for GitHub distribution.
-- Store manga page template assets under `plugins/manga-production/skills/manga-generation/assets/Manga_Panel_Layout_Template/`; do not move them back to a repository-root template folder.
-- When changing template assets or the template manifest, run `python3 plugins/manga-production/scripts/generate_manga_templates.py` and verify `template_manifest.json` still references `assets/Manga_Panel_Layout_Template`.
+- This repository is a single Codex skill package, not a plugin. Keep the published skill rooted at the repository root.
+- Keep `SKILL.md`, `agents/`, `assets/`, `references/`, and `scripts/` at the repository root so the skill remains self-contained for GitHub distribution.
+- Store manga page template assets under `assets/Manga_Panel_Layout_Template/`.
+- When changing template assets or the template manifest, run `python3 scripts/generate_manga_templates.py` and verify `template_manifest.json` still references `assets/Manga_Panel_Layout_Template`.
 - Keep generated manga output under `output/manga-pages/`; it is local runtime output and should not be committed.
-- Before publishing, replace `maintainers@example.com` in `plugins/manga-production/.codex-plugin/plugin.json` with the final maintainer contact address.
+- Do not add manifest wrappers, marketplace files, or `.codex-plugin/` metadata unless the project is intentionally converted away from a plain skill package.

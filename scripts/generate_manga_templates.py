@@ -15,14 +15,8 @@ BLACK = (12, 12, 12)
 WHITE = (255, 255, 255)
 GUIDE = (180, 180, 180)
 SAFE = (215, 215, 215)
-PLUGIN_ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_OUTPUT_DIR = (
-    PLUGIN_ROOT
-    / "skills"
-    / "manga-generation"
-    / "assets"
-    / "Manga_Panel_Layout_Template"
-)
+SKILL_ROOT = Path(__file__).resolve().parents[1]
+DEFAULT_OUTPUT_DIR = SKILL_ROOT / "assets" / "Manga_Panel_Layout_Template"
 
 
 LEGACY_TEMPLATES = [

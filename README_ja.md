@@ -7,9 +7,9 @@
   </thead>
 </table>
 
-# Codex 用マンガ制作プラグイン
+# Codex 用マンガ生成スキル
 
-Manga Production は、ストーリー草稿・キャラクター資料・スタイルノートからカラーマンガページの企画・生成を行うための Codex プラグインです。`manga-generation` スキルを提供しており、草稿をページごとのビート（場面展開）に展開し、同梱のマンガページテンプレートを選択し、コマごとの描画指示を作成し、`$imagegen` を使って各完成マンガページをコマ画像に分割したりコードで合成したりせず、1ページ全体として描画します。
+Manga Generation は、ストーリー草稿・キャラクター資料・スタイルノートからカラーマンガページの企画・生成を行うための Codex スキルです。草稿をページごとのビート（場面展開）に展開し、同梱のマンガページテンプレートを選択し、コマごとの描画指示を作成し、`$imagegen` を使って各完成マンガページをコマ画像に分割したりコードで合成したりせず、1ページ全体として描画します。
 
 ## 機能
 
@@ -23,13 +23,13 @@ Manga Production は、ストーリー草稿・キャラクター資料・スタ
 
 ## テンプレートプレビュー
 
-このプラグインには、再利用可能なマンガページテンプレートが `plugins/manga-production/skills/manga-generation/assets/Manga_Panel_Layout_Template/` に同梱されています。
+このスキルには、再利用可能なマンガページテンプレートが `assets/Manga_Panel_Layout_Template/` に同梱されています。
 
-<img src="plugins/manga-production/skills/manga-generation/assets/Manga_Panel_Layout_Template/generated-layout-5-panel-balanced.png" alt="5コママンガページテンプレート" width="480">
+<img src="assets/Manga_Panel_Layout_Template/generated-layout-5-panel-balanced.png" alt="5コママンガページテンプレート" width="480">
 
 ## 要件
 
-- プラグインサポートを備えた Codex。
+- スキルサポートを備えた Codex。
 - 最終マンガページ画像を生成する際に `$imagegen` が利用可能であること。
 - `generate_manga_templates.py` でテンプレート PNG を再生成する場合のみ、Pillow を含む Python 3 が必要です。
 
@@ -37,23 +37,16 @@ Manga Production は、ストーリー草稿・キャラクター資料・スタ
 
 ## インストール
 
+このリポジトリを `manga-generation` というスキルフォルダ名で Codex の skills ディレクトリに clone またはコピーしてください：
+
 ```text
-@plugin-creator  Please install the `manga-generator-codex/plugins/manga-production` plugin.
-If there is no location to install the local Codex plugin, create one.
+~/.codex/skills/manga-generation
 ```
 
-もしくは、
-
-このプラグインを Codex に追加する際は、プラグインのルートディレクトリを使用してください：
+必須のスキルエントリポイント：
 
 ```text
-plugins/manga-production
-```
-
-マニフェストの場所：
-
-```text
-plugins/manga-production/.codex-plugin/plugin.json
+SKILL.md
 ```
 
 ## 使い方
@@ -86,40 +79,34 @@ Use $manga-generation in Slight Expansion mode for this story draft.
 以下のコマンドで、決定論的なブランク原稿ベース・生成済みパネルテンプレート・`template_manifest.json` を再生成できます：
 
 ```bash
-python3 plugins/manga-production/scripts/generate_manga_templates.py
+python3 scripts/generate_manga_templates.py
 ```
 
 スクリプトの出力先：
 
 ```text
-plugins/manga-production/skills/manga-generation/assets/Manga_Panel_Layout_Template/
+assets/Manga_Panel_Layout_Template/
 ```
 
-GitHub から公開できる状態を維持するため、プラグインは `plugins/manga-production/` 内で自己完結するようにしてください。
+GitHub から公開できる状態を維持するため、スキルはリポジトリルートで自己完結するようにしてください。
 
 ## プロジェクト構成
 
 ```text
 .
-├── plugins/manga-production/
-│   ├── .codex-plugin/plugin.json
-│   ├── assets/manga-production-icon.svg
-│   ├── scripts/generate_manga_templates.py
-│   └── skills/manga-generation/
-│       ├── SKILL.md
-│       ├── agents/openai.yaml
-│       ├── assets/Manga_Panel_Layout_Template/
-│       └── references/
+├── SKILL.md
+├── agents/openai.yaml
+├── assets/Manga_Panel_Layout_Template/
+├── references/
+├── scripts/generate_manga_templates.py
 ├── AGENTS.md
-├── CHANGELOG.md
 ├── LICENSE
-├── NOTES.md
 └── README.md
 ```
 
 ## プライバシー
 
-このプラグインは認証情報を保存せず、外部サービスとの連携も定義していません。マンガ草稿・参考画像・生成されたページプラン・出力画像は、ユーザーが明示的に共有しない限り、アクティブな Codex ワークスペース内に保持されます。
+このスキルは認証情報を保存せず、外部サービスとの連携も定義していません。マンガ草稿・参考画像・生成されたページプラン・出力画像は、ユーザーが明示的に共有しない限り、アクティブな Codex ワークスペース内に保持されます。
 
 ## ライセンス
 

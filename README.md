@@ -7,9 +7,9 @@
   </thead>
 </table>
 
-# Manga Production Plugin for Codex
+# Manga Generation Skill for Codex
 
-Manga Production is a Codex plugin for planning and generating colorful manga pages from story drafts, character references, and style notes. It provides a `manga-generation` skill that expands a draft into page beats, selects bundled manga page templates, writes panel-by-panel briefs, and uses `$imagegen` to render each completed manga page as one full page instead of separate panel images or code-composited layouts.
+Manga Generation is a Codex skill for planning and generating colorful manga pages from story drafts, character references, and style notes. It expands a draft into page beats, selects bundled manga page templates, writes panel-by-panel briefs, and uses `$imagegen` to render each completed manga page as one full page instead of separate panel images or code-composited layouts.
 
 ## Features
 
@@ -23,13 +23,13 @@ Manga Production is a Codex plugin for planning and generating colorful manga pa
 
 ## Template Preview
 
-The plugin bundles reusable manga page templates under `plugins/manga-production/skills/manga-generation/assets/Manga_Panel_Layout_Template/`.
+The skill bundles reusable manga page templates under `assets/Manga_Panel_Layout_Template/`.
 
-<img src="plugins/manga-production/skills/manga-generation/assets/Manga_Panel_Layout_Template/generated-layout-5-panel-balanced.png" alt="Five-panel manga page template" width="480">
+<img src="assets/Manga_Panel_Layout_Template/generated-layout-5-panel-balanced.png" alt="Five-panel manga page template" width="480">
 
 ## Requirements
 
-- Codex with plugin support.
+- Codex with skill support.
 - `$imagegen` availability when generating final manga page images.
 - Python 3 with Pillow available only when regenerating template PNGs with `generate_manga_templates.py`.
 
@@ -37,23 +37,16 @@ No API keys, credentials, or environment variables are defined by this repositor
 
 ## Installation
 
+Clone or copy this repository as a skill folder named `manga-generation` under your Codex skills directory:
+
 ```text
-@plugin-creator  Please install the `manga-generator-codex/plugins/manga-production` plugin.
-If there is no location to install the local Codex plugin, create one.
+~/.codex/skills/manga-generation
 ```
 
-OR
-
-Use the plugin root directory when adding this plugin to Codex:
+The required skill entry point is:
 
 ```text
-plugins/manga-production
-```
-
-The manifest is located at:
-
-```text
-plugins/manga-production/.codex-plugin/plugin.json
+SKILL.md
 ```
 
 ## Usage
@@ -86,40 +79,34 @@ Template PNGs are only references for page geometry. Final pages should be drawn
 Regenerate deterministic blank manuscript bases, generated panel templates, and `template_manifest.json` with:
 
 ```bash
-python3 plugins/manga-production/scripts/generate_manga_templates.py
+python3 scripts/generate_manga_templates.py
 ```
 
 The script writes to:
 
 ```text
-plugins/manga-production/skills/manga-generation/assets/Manga_Panel_Layout_Template/
+assets/Manga_Panel_Layout_Template/
 ```
 
-Keep the plugin self-contained under `plugins/manga-production/` so it remains publishable from GitHub.
+Keep the skill self-contained at the repository root so it remains publishable from GitHub.
 
 ## Project Structure
 
 ```text
 .
-├── plugins/manga-production/
-│   ├── .codex-plugin/plugin.json
-│   ├── assets/manga-production-icon.svg
-│   ├── scripts/generate_manga_templates.py
-│   └── skills/manga-generation/
-│       ├── SKILL.md
-│       ├── agents/openai.yaml
-│       ├── assets/Manga_Panel_Layout_Template/
-│       └── references/
+├── SKILL.md
+├── agents/openai.yaml
+├── assets/Manga_Panel_Layout_Template/
+├── references/
+├── scripts/generate_manga_templates.py
 ├── AGENTS.md
-├── CHANGELOG.md
 ├── LICENSE
-├── NOTES.md
 └── README.md
 ```
 
 ## Privacy
 
-This plugin stores no credentials and defines no external service integration. Manga drafts, reference images, generated page plans, and output images stay in the active Codex workspace unless the user explicitly shares them elsewhere.
+This skill stores no credentials and defines no external service integration. Manga drafts, reference images, generated page plans, and output images stay in the active Codex workspace unless the user explicitly shares them elsewhere.
 
 ## License
 

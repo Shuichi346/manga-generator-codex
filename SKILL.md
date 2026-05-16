@@ -91,6 +91,6 @@ See `references/imagegen-page-prompt.md` for the page prompt scaffold.
 
 ## Template Maintenance
 
-Use `plugins/manga-production/scripts/generate_manga_templates.py` to regenerate deterministic blank manuscript bases, clean panel layout templates, and `skills/manga-generation/assets/Manga_Panel_Layout_Template/template_manifest.json`.
+Use `scripts/generate_manga_templates.py` to regenerate deterministic blank manuscript bases, clean panel layout templates, and `assets/Manga_Panel_Layout_Template/template_manifest.json`.
 
 Do not write personal local paths, credentials, API keys, tokens, or machine-specific configuration into prompts, manifests, or generated metadata.
