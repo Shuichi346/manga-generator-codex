@@ -1,0 +1,4 @@
+interface:
+  display_name: "Manga Generation"
+  short_description: "Plan and generate manga pages"
+  default_prompt: "Use $manga-generation to turn my story draft and character references into manga pages."

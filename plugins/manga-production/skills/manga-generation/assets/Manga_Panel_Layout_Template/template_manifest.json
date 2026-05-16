@@ -1,0 +1,230 @@
+{
+  "schema_version": 1,
+  "template_folder": "assets/Manga_Panel_Layout_Template",
+  "reading_order": "Use visible panel numbers as the panel IDs and reading order.",
+  "default_max_pages": 5,
+  "templates": [
+    {
+      "id": "legacy-skewed-6-panel",
+      "file": "Manga Panel Layout Template1.png",
+      "kind": "panel-layout",
+      "panel_count": 6,
+      "best_for": [
+        "action",
+        "turning point",
+        "large central beat"
+      ],
+      "description": "Two top panels, one wide central panel, and three small bottom panels with dynamic skew.",
+      "size": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "id": "legacy-balanced-5-panel",
+      "file": "Manga Panel Layout Template2.png",
+      "kind": "panel-layout",
+      "panel_count": 5,
+      "best_for": [
+        "balanced scene",
+        "conversation",
+        "setup and reveal"
+      ],
+      "description": "One wide opening panel followed by two rows of paired panels.",
+      "size": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "id": "legacy-dense-7-panel",
+      "file": "Manga Panel Layout Template3.png",
+      "kind": "panel-layout",
+      "panel_count": 7,
+      "best_for": [
+        "dense dialogue",
+        "multi-beat sequence",
+        "investigation"
+      ],
+      "description": "A wide top panel followed by three rows of two smaller panels.",
+      "size": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "id": "legacy-staggered-6-panel",
+      "file": "Manga Panel Layout Template4.png",
+      "kind": "panel-layout",
+      "panel_count": 6,
+      "best_for": [
+        "reaction chain",
+        "uneven tension",
+        "dramatic reveal"
+      ],
+      "description": "A wide top panel with staggered lower panels and one tall right-side panel.",
+      "size": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "id": "legacy-dynamic-6-panel",
+      "file": "Manga Panel Layout Template5.png",
+      "kind": "panel-layout",
+      "panel_count": 6,
+      "best_for": [
+        "fast action",
+        "chase",
+        "impact page"
+      ],
+      "description": "Slanted gutters and asymmetric panels for high-energy page movement.",
+      "size": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "id": "legacy-yonkoma-4-panel",
+      "file": "4-panel manga template1.png",
+      "kind": "panel-layout",
+      "panel_count": 4,
+      "best_for": [
+        "yonkoma",
+        "gag",
+        "simple four-beat scene"
+      ],
+      "description": "Four stacked horizontal panels for classic four-panel timing.",
+      "size": [
+        887,
+        1774
+      ]
+    },
+    {
+      "id": "legacy-grid-8-panel",
+      "file": "4-panel manga template2.png",
+      "kind": "panel-layout",
+      "panel_count": 8,
+      "best_for": [
+        "dense sequence",
+        "short dialogue beats",
+        "parallel reactions"
+      ],
+      "description": "Two-column grid with eight panels in manga-style numbered order.",
+      "size": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "id": "blank-manuscript-simple-portrait",
+      "file": "blank-manuscript-simple-portrait.png",
+      "kind": "blank-base",
+      "panel_count": 0,
+      "best_for": [
+        "custom layout",
+        "cover",
+        "chapter opener"
+      ],
+      "description": "Portrait manuscript base with outer trim and inner safe area.",
+      "size": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "id": "blank-manuscript-bleed-safe-portrait",
+      "file": "blank-manuscript-bleed-safe-portrait.png",
+      "kind": "blank-base",
+      "panel_count": 0,
+      "best_for": [
+        "custom page",
+        "print-aware composition",
+        "full-page illustration"
+      ],
+      "description": "Portrait manuscript base with bleed, trim, safe area, and center guides.",
+      "size": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "id": "blank-manuscript-yonkoma-tall",
+      "file": "blank-manuscript-yonkoma-tall.png",
+      "kind": "blank-base",
+      "panel_count": 0,
+      "best_for": [
+        "yonkoma custom layout",
+        "vertical gag strip"
+      ],
+      "description": "Tall manuscript base for four-panel vertical manga pages.",
+      "size": [
+        887,
+        1774
+      ]
+    },
+    {
+      "id": "generated-layout-3-panel-establishing",
+      "file": "generated-layout-3-panel-establishing.png",
+      "kind": "panel-layout",
+      "panel_count": 3,
+      "best_for": [
+        "establishing beat",
+        "slow reveal",
+        "quiet scene"
+      ],
+      "description": "One wide top panel with two lower vertical panels for setup and reaction.",
+      "size": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "id": "generated-layout-4-panel-yonkoma",
+      "file": "generated-layout-4-panel-yonkoma.png",
+      "kind": "panel-layout",
+      "panel_count": 4,
+      "best_for": [
+        "yonkoma",
+        "gag timing",
+        "four-beat exchange"
+      ],
+      "description": "Four stacked panels for compact gag or slice-of-life pacing.",
+      "size": [
+        887,
+        1774
+      ]
+    },
+    {
+      "id": "generated-layout-5-panel-balanced",
+      "file": "generated-layout-5-panel-balanced.png",
+      "kind": "panel-layout",
+      "panel_count": 5,
+      "best_for": [
+        "balanced scene",
+        "setup escalation hook"
+      ],
+      "description": "Wide opening panel followed by two rows of paired panels.",
+      "size": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "id": "generated-layout-6-panel-rhythm",
+      "file": "generated-layout-6-panel-rhythm.png",
+      "kind": "panel-layout",
+      "panel_count": 6,
+      "best_for": [
+        "action rhythm",
+        "central dramatic beat",
+        "reaction sequence"
+      ],
+      "description": "Two top panels, one wide middle panel, and three compact lower panels.",
+      "size": [
+        1024,
+        1536
+      ]
+    }
+  ]
+}

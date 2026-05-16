@@ -1,2 +1,6 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+*.png binary
+*.svg text eol=lf
+*.json text eol=lf
+*.md text eol=lf

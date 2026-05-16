@@ -1,0 +1,44 @@
+{
+  "name": "manga-production",
+  "version": "0.1.0",
+  "description": "Plan manga pages from story drafts and reference images, then generate completed page images with imagegen.",
+  "author": {
+    "name": "Manga Production Plugin Maintainers",
+    "email": "maintainers@example.com",
+    "url": "https://github.com/OWNER/REPOSITORY"
+  },
+  "homepage": "https://github.com/OWNER/REPOSITORY#readme",
+  "repository": "https://github.com/OWNER/REPOSITORY",
+  "license": "MIT",
+  "keywords": [
+    "manga",
+    "comics",
+    "storyboarding",
+    "image-generation",
+    "codex-skill"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Manga Production",
+    "shortDescription": "Plan and generate manga pages",
+    "longDescription": "A Codex plugin for turning story drafts, character references, and user-provided images into planned manga pages. It expands drafts according to the selected mode, chooses a manuscript template, writes clear panel-by-panel art and dialogue briefs, and uses imagegen to generate complete manga pages one page at a time.",
+    "developerName": "Manga Production Plugin Maintainers",
+    "category": "Creative",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/OWNER/REPOSITORY#readme",
+    "privacyPolicyURL": "https://github.com/OWNER/REPOSITORY#privacy",
+    "termsOfServiceURL": "https://github.com/OWNER/REPOSITORY#terms-of-use",
+    "defaultPrompt": [
+      "Use $manga-generation to make a 5-page manga from my draft and references.",
+      "Use $manga-generation in Slight Expansion mode for this story draft.",
+      "Use $manga-generation to plan panels before page generation."
+    ],
+    "brandColor": "#111111",
+    "composerIcon": "./assets/manga-production-icon.svg",
+    "logo": "./assets/manga-production-icon.svg",
+    "screenshots": []
+  }
+}
